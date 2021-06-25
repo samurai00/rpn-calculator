@@ -92,7 +92,7 @@ public class Calculator {
         try {
             number = NumberUtil.parseNumber(s);
             commands.pop();
-            commands.push(number.toString());
+            commands.push(number.toPlainString());
             if (!rerun) {
                 this.allCommandStack.push(commands.peek());
             }
@@ -120,7 +120,7 @@ public class Calculator {
             operator.handleParams(commands);
             BigDecimal result = operator.proceed();
             if (result != null) {
-                commands.push(result.toString());
+                commands.push(result.toPlainString());
                 if (!rerun) {
                     this.allCommandStack.push(cmd);
                 }
