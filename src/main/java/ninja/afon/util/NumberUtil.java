@@ -41,6 +41,6 @@ public class NumberUtil {
     }
 
     public static String toOutputString(BigDecimal number) {
-        return checkScale(number, OUTPUT_SCALE).toString();
+        return checkScale(number, OUTPUT_SCALE).toPlainString();
     }
 }
